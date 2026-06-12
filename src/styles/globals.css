@@ -1,0 +1,134 @@
+@import "./theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ───────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-ink font-body text-base antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-heading text-ink;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--c-brand);
+    color: #fff;
+  }
+}
+
+/* ── Shared components ──────────────────────────────────── */
+@layer components {
+
+  /* layout */
+  .container-site {
+    @apply max-w-site mx-auto px-5 md:px-8;
+  }
+
+  .section {
+    @apply py-12 md:py-16;
+  }
+
+  /* labels above section titles */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-brand-ink;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-6;
+    background: var(--g-brand);
+  }
+
+  .section-title {
+    @apply font-heading text-3xl md:text-4xl font-semibold leading-tight;
+  }
+
+  .section-desc {
+    @apply text-base text-muted leading-relaxed;
+  }
+
+  /* gradient helpers */
+  .bg-gradient-brand {
+    background: var(--g-brand);
+  }
+
+  .bg-gradient-soft {
+    background: var(--g-brand-soft);
+  }
+
+  .text-gradient {
+    background: var(--g-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-md px-5 py-2.5 font-heading text-sm font-semibold tracking-wide transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn text-white shadow-card hover:shadow-lift hover:-translate-y-px;
+    background: var(--g-brand);
+  }
+
+  .btn-ghost {
+    @apply btn border border-line bg-surface text-ink hover:border-brand hover:text-brand-ink;
+  }
+
+  /* cards */
+  .card {
+    @apply rounded-xl border border-line bg-surface shadow-card;
+  }
+
+  /* hairline with gradient center */
+  .rule-gradient {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--c-brand), var(--c-brand-2), transparent);
+    opacity: 0.45;
+  }
+
+  /* translucent themed surfaces (CSS vars can't take Tailwind /alpha) */
+  .glass {
+    background: color-mix(in srgb, var(--c-surface) 85%, transparent);
+  }
+
+  .caption-fade {
+    background: linear-gradient(
+      to top,
+      color-mix(in srgb, var(--c-ink) 78%, transparent),
+      transparent
+    );
+  }
+
+  /* form fields */
+  .field::placeholder {
+    color: var(--c-muted);
+    opacity: 0.65;
+  }
+
+  .field {
+    @apply w-full rounded-md border border-line bg-surface px-3.5 py-2.5 text-base text-ink outline-none transition-colors focus:border-brand;
+  }
+}
+
+/* ── Motion safety ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

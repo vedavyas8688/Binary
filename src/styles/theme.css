@@ -1,0 +1,38 @@
+/*
+  ════════════════════════════════════════════════════════════════
+   THEME — EDIT EVERYTHING HERE
+  ════════════════════════════════════════════════════════════════
+   Every color and font used across the website is defined in this
+   one block. Change a value here and the whole site updates —
+   Tailwind classes (text-ink, bg-brand, font-heading, …) and all
+   gradients read from these variables.
+
+   Note: if you change the font families, also update the Google
+   Fonts <link> in index.html so the new fonts are loaded.
+  ════════════════════════════════════════════════════════════════
+*/
+
+:root {
+  /* ── Base surfaces ── */
+  --c-bg:        #f7f9fa;   /* page background (light mist)        */
+  --c-surface:   #ffffff;   /* cards, navbar, panels               */
+  --c-line:      #e6ecef;   /* hairline borders & dividers         */
+
+  /* ── Text ── */
+  --c-ink:       #17222e;   /* headings & primary text             */
+  --c-muted:     #64727f;   /* secondary / body text               */
+
+  /* ── Brand (gradient runs from brand → brand-2) ── */
+  --c-brand:     #0e8c68;   /* emerald                             */
+  --c-brand-2:   #1795b4;   /* teal-blue                           */
+  --c-brand-soft:#e9f5f0;   /* tinted backgrounds, chips           */
+  --c-brand-ink: #0a6b50;   /* darker brand, for text on light bg  */
+
+  /* ── Gradients ── */
+  --g-brand:      linear-gradient(120deg, var(--c-brand) 0%, var(--c-brand-2) 100%);
+  --g-brand-soft: linear-gradient(135deg, #ecf7f2 0%, #e9f3f8 55%, #f3f1fa 100%);
+
+  /* ── Fonts ── */
+  --font-heading: "Roboto Flex", "Roboto", sans-serif;  /* titles & headings */
+  --font-body:    "Roboto", sans-serif;                 /* everything else   */
+}
