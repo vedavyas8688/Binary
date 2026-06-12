@@ -1,24 +1,29 @@
 import PageLayout from "../components/PageLayout";
 import PageHeader from "../components/PageHeader";
-import AboutProject from "../sections/AboutProject";
-import Highlights from "../sections/Highlights";
-import Stats from "../sections/Stats";
+import DeveloperIntro from "../sections/DeveloperIntro";
+import MissionVision from "../sections/MissionVision";
+import Team from "../sections/Team";
+import Milestones from "../sections/Milestones";
 import Location from "../sections/Location";
-import Contact from "../sections/Contact";
+import PastProjects from "../sections/PastProjects";
+import Partners from "../sections/Partners";
 
 export default function About() {
   return (
     <PageLayout>
       <PageHeader
-        label="About"
-        title="The story behind Binary"
-        desc="One in-house project, built end-to-end with a focus on low-density, ultra-luxury living on Sarjapur Road."
+        label="About Binary"
+        title="One developer. One project at a time."
+        desc="The team, philosophy, and track record behind Binary Project 4 on Sarjapur Road."
+        image="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=85"
       />
-      <AboutProject />
-      <Stats />
-      <Highlights />
+      <DeveloperIntro />
+      <MissionVision />
+      <Team />
+      <Milestones />
       <Location />
-      <Contact />
+      <PastProjects />
+      <Partners />
     </PageLayout>
   );
 }

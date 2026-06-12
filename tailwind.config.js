@@ -16,17 +16,17 @@ export default {
       Adjust here to resize text across the whole site.
     */
     fontSize: {
-      "2xs": ["0.6875rem", { lineHeight: "1rem" }],      // 11px
-      xs:    ["0.75rem",   { lineHeight: "1.125rem" }],  // 12px
-      sm:    ["0.8125rem", { lineHeight: "1.25rem" }],   // 13px
-      base:  ["0.9375rem", { lineHeight: "1.625rem" }],  // 15px
-      lg:    ["1.0625rem", { lineHeight: "1.75rem" }],   // 17px
-      xl:    ["1.1875rem", { lineHeight: "1.875rem" }],  // 19px
-      "2xl": ["1.375rem",  { lineHeight: "1.875rem" }],  // 22px
-      "3xl": ["1.75rem",   { lineHeight: "2.125rem" }],  // 28px
-      "4xl": ["2.25rem",   { lineHeight: "2.625rem" }],  // 36px
-      "5xl": ["3rem",      { lineHeight: "1.08" }],      // 48px
-      "6xl": ["3.75rem",   { lineHeight: "1.04" }],      // 60px
+      "2xs": ["0.75rem",   { lineHeight: "1.125rem" }],  // 12px
+      xs:    ["0.8125rem", { lineHeight: "1.25rem" }],   // 13px
+      sm:    ["0.875rem",  { lineHeight: "1.375rem" }],  // 14px
+      base:  ["1rem",      { lineHeight: "1.75rem" }],   // 16px
+      lg:    ["1.125rem",  { lineHeight: "1.875rem" }],  // 18px
+      xl:    ["1.25rem",   { lineHeight: "1.9375rem" }], // 20px
+      "2xl": ["1.5rem",    { lineHeight: "2rem" }],      // 24px
+      "3xl": ["1.875rem",  { lineHeight: "2.3125rem" }], // 30px
+      "4xl": ["2.375rem",  { lineHeight: "2.75rem" }],   // 38px
+      "5xl": ["3.25rem",   { lineHeight: "1.08" }],      // 52px
+      "6xl": ["4rem",      { lineHeight: "1.04" }],      // 64px
     },
     extend: {
       colors: {
@@ -44,6 +44,7 @@ export default {
       },
       fontFamily: {
         heading: "var(--font-heading)",
+        display: "var(--font-display)",
         body:    "var(--font-body)",
       },
       maxWidth: {

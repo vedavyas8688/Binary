@@ -1,50 +1,33 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navLinks, siteInfo } from "../data/content";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "glass backdrop-blur-md border-b border-line shadow-card"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="container-site flex h-14 items-center justify-between">
-        {/* Brand */}
-        <Link to="/" className="flex items-center gap-2">
-          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-brand font-heading text-sm font-bold text-white">
+    <header className="absolute inset-x-0 top-0 z-50 bg-transparent">
+      <nav className="container-site flex h-20 items-center justify-between">
+        {/* Logo — left */}
+        <Link to="/" className="flex items-center gap-2.5">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-brand font-heading text-base font-bold text-white">
             B
           </span>
-          <span className="font-heading text-lg font-bold tracking-tight text-ink">
-            Binary
-            <span className="ml-1.5 text-xs font-medium uppercase tracking-[0.16em] text-muted">
-              {siteInfo.tagline}
-            </span>
+          <span className="font-heading text-xl font-bold tracking-tight text-white">
+            {siteInfo.name}
           </span>
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden items-center gap-7 md:flex">
+        {/* Links — center */}
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <li key={link.path}>
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
-                  `font-heading text-sm font-medium tracking-wide transition-colors ${
-                    isActive ? "text-brand-ink" : "text-ink hover:text-brand-ink"
+                  `font-heading text-base font-medium transition-colors ${
+                    isActive ? "text-white" : "text-white/70 hover:text-white"
                   }`
                 }
               >
@@ -54,50 +37,46 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden md:block">
-          <a href="#contact" className="btn-primary !px-4 !py-2">
-            <Phone size={13} strokeWidth={2.2} />
-            Enquire Now
-          </a>
-        </div>
+        {/* White pill CTA — right */}
+        <a
+          href="/#contact"
+          className="hidden rounded-full bg-white px-6 py-2.5 font-heading text-base font-semibold text-ink transition-transform hover:-translate-y-px md:block"
+        >
+          Contact Us
+        </a>
 
         {/* Mobile toggle */}
         <button
-          className="flex h-9 w-9 items-center justify-center rounded-md border border-line bg-surface text-ink md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-white md:hidden"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Close menu" : "Open menu"}
         >
-          {open ? <X size={16} /> : <Menu size={16} />}
+          {open ? <X size={17} /> : <Menu size={17} />}
         </button>
       </nav>
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-line bg-surface md:hidden">
+        <div className="border-t border-white/10 bg-[#0d0d0d] md:hidden">
           <ul className="container-site flex flex-col py-3">
             {navLinks.map((link) => (
               <li key={link.path}>
                 <NavLink
                   to={link.path}
                   onClick={() => setOpen(false)}
-                  className={({ isActive }) =>
-                    `block py-2.5 font-heading text-base font-medium ${
-                      isActive ? "text-brand-ink" : "text-ink"
-                    }`
-                  }
+                  className="block py-2.5 font-heading text-base font-medium text-white/85"
                 >
                   {link.label}
                 </NavLink>
               </li>
             ))}
-            <li className="pt-2">
+            <li className="pt-2 pb-2">
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
-                className="btn-primary w-full"
+                className="block rounded-full bg-white px-6 py-2.5 text-center font-heading text-base font-semibold text-ink"
               >
-                <Phone size={13} strokeWidth={2.2} />
-                Enquire Now
+                Contact Us
               </a>
             </li>
           </ul>

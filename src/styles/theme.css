@@ -14,7 +14,7 @@
 
 :root {
   /* ── Base surfaces ── */
-  --c-bg:        #faf7f2;   /* page background (warm ivory)        */
+  --c-bg:        #ffffff;   /* page background (white)             */
   --c-surface:   #ffffff;   /* cards, navbar, panels               */
   --c-line:      #eae2d6;   /* hairline borders & dividers         */
 
@@ -33,6 +33,7 @@
   --g-brand-soft: linear-gradient(135deg, #f7f1e6 0%, #f6efe4 55%, #f3ece4 100%);
 
   /* ── Fonts ── */
-  --font-heading: "Roboto Flex", "Roboto", sans-serif;  /* titles & headings */
-  --font-body:    "Roboto", sans-serif;                 /* everything else   */
+  --font-heading: "Roboto Flex", "Roboto", sans-serif;  /* eyebrows, labels, UI */
+  --font-display: "Fraunces", "Roboto Flex", serif;     /* big titles & hero    */
+  --font-body:    "Roboto", sans-serif;                 /* everything else      */
 }

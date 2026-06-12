@@ -1,9 +1,13 @@
 import PageLayout from "../components/PageLayout";
 import PageHeader from "../components/PageHeader";
-import FloorPlans from "../sections/FloorPlans";
-import Process from "../sections/Process";
+import ServicesGrid from "../sections/ServicesGrid";
+import ServiceDetails from "../sections/ServiceDetails";
+import Offers from "../sections/Offers";
+import Downloads from "../sections/Downloads";
+import HowWeWork from "../sections/HowWeWork";
 import Faq from "../sections/Faq";
-import Contact from "../sections/Contact";
+import CtaBanner from "../sections/CtaBanner";
+import { ctaServices } from "../data/content";
 
 export default function Services() {
   return (
@@ -11,12 +15,15 @@ export default function Services() {
       <PageHeader
         label="Services"
         title="From first visit to final keys"
-        desc="Floor plans, transparent pricing, and a simple four-step buying process."
+        desc="Apartments, villas, plots, interiors, and full buyer support — everything under one roof."
       />
-      <FloorPlans />
-      <Process />
+      <ServicesGrid />
+      <ServiceDetails />
+      <Offers />
+      <Downloads />
+      <HowWeWork />
       <Faq />
-      <Contact />
+      <CtaBanner {...ctaServices} />
     </PageLayout>
   );
 }

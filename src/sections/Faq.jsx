@@ -17,7 +17,7 @@ export default function Faq() {
             title="Questions, answered"
             desc="Everything buyers usually ask about the project, pricing, and the EOI process. Still unsure? Our team is a call away."
           />
-          <a href="#contact" className="btn-primary mt-6" data-reveal>
+          <a href="/#contact" className="btn-primary mt-6" data-reveal>
             Talk to Our Team
           </a>
         </div>
