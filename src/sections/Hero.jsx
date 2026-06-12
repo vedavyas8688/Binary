@@ -44,14 +44,14 @@ export default function Hero() {
 
           <h1
             data-hero
-            className="font-heading text-4xl font-bold leading-[1.08] md:text-5xl"
+            className="font-heading text-5xl font-bold leading-[1.06] md:text-6xl"
           >
             {heroData.title}
             <br />
             <span className="text-gradient">{heroData.titleAccent}</span>
           </h1>
 
-          <p data-hero className="max-w-md text-base leading-relaxed text-muted">
+          <p data-hero className="max-w-lg text-lg leading-relaxed text-muted">
             {heroData.subtitle}
           </p>
 
@@ -72,7 +72,7 @@ export default function Hero() {
           >
             {heroData.specs.map((s) => (
               <div key={s.label} className="bg-surface px-4 py-3">
-                <p className="font-heading text-lg font-semibold text-ink">
+                <p className="font-heading text-xl font-semibold text-ink">
                   {s.value}
                 </p>
                 <p className="mt-0.5 text-xs uppercase tracking-[0.12em] text-muted">
@@ -89,7 +89,7 @@ export default function Hero() {
             <img
               src={heroData.image}
               alt="Binary Project 4 — exterior view"
-              className="h-[360px] w-full object-cover md:h-[540px]"
+              className="h-[380px] w-full object-cover md:h-[580px]"
               loading="eager"
             />
           </div>

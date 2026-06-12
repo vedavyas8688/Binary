@@ -12,21 +12,21 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     /*
-      Compact type scale — every step is ~4–5px smaller than the
-      Tailwind default (base 16px → 13px, 5xl 48px → 43px, etc.)
+      Type scale — slightly compact but comfortable.
+      Adjust here to resize text across the whole site.
     */
     fontSize: {
-      "2xs": ["0.5625rem", { lineHeight: "0.875rem" }], //  9px
-      xs:    ["0.625rem",  { lineHeight: "0.9375rem" }], // 10px
-      sm:    ["0.6875rem", { lineHeight: "1.0625rem" }], // 11px
-      base:  ["0.8125rem", { lineHeight: "1.375rem" }],  // 13px
-      lg:    ["0.9375rem", { lineHeight: "1.5rem" }],    // 15px
-      xl:    ["1.0625rem", { lineHeight: "1.625rem" }],  // 17px
-      "2xl": ["1.25rem",   { lineHeight: "1.75rem" }],   // 20px
-      "3xl": ["1.5625rem", { lineHeight: "1.9375rem" }], // 25px
-      "4xl": ["1.9375rem", { lineHeight: "2.25rem" }],   // 31px
-      "5xl": ["2.6875rem", { lineHeight: "1.08" }],      // 43px
-      "6xl": ["3.4375rem", { lineHeight: "1.04" }],      // 55px
+      "2xs": ["0.6875rem", { lineHeight: "1rem" }],      // 11px
+      xs:    ["0.75rem",   { lineHeight: "1.125rem" }],  // 12px
+      sm:    ["0.8125rem", { lineHeight: "1.25rem" }],   // 13px
+      base:  ["0.9375rem", { lineHeight: "1.625rem" }],  // 15px
+      lg:    ["1.0625rem", { lineHeight: "1.75rem" }],   // 17px
+      xl:    ["1.1875rem", { lineHeight: "1.875rem" }],  // 19px
+      "2xl": ["1.375rem",  { lineHeight: "1.875rem" }],  // 22px
+      "3xl": ["1.75rem",   { lineHeight: "2.125rem" }],  // 28px
+      "4xl": ["2.25rem",   { lineHeight: "2.625rem" }],  // 36px
+      "5xl": ["3rem",      { lineHeight: "1.08" }],      // 48px
+      "6xl": ["3.75rem",   { lineHeight: "1.04" }],      // 60px
     },
     extend: {
       colors: {
@@ -47,7 +47,7 @@ export default {
         body:    "var(--font-body)",
       },
       maxWidth: {
-        site: "85rem", // 1360px — wide container, fills the screen
+        site: "90rem", // 1440px — wide container, fills the screen
       },
       boxShadow: {
         card: "0 1px 2px rgba(16,34,47,0.04), 0 8px 24px rgba(16,34,47,0.06)",

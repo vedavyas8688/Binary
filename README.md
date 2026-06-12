@@ -22,9 +22,8 @@ npm run build    # production build into /dist
   `index.html`.
 
 - **Type scale** → `tailwind.config.js`
-  The whole site uses a compact scale (~5px smaller than Tailwind
-  defaults). Adjust the `fontSize` block there if you want it bigger
-  or smaller.
+  The whole site reads from one `fontSize` block — adjust it there
+  to resize text everywhere.
 
 - **All text & images** → `src/data/content.js`
   Hero copy, specs, amenities, floor plans, testimonials, nav links,

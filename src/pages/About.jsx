@@ -3,6 +3,7 @@ import PageHeader from "../components/PageHeader";
 import AboutProject from "../sections/AboutProject";
 import Highlights from "../sections/Highlights";
 import Stats from "../sections/Stats";
+import Location from "../sections/Location";
 import Contact from "../sections/Contact";
 
 export default function About() {
@@ -16,6 +17,7 @@ export default function About() {
       <AboutProject />
       <Stats />
       <Highlights />
+      <Location />
       <Contact />
     </PageLayout>
   );

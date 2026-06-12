@@ -230,3 +230,73 @@ export const footerServices = [
   "Plot Development",
   "Interior Design",
 ];
+
+// ── Location advantage ──
+export const locationAdvantage = {
+  label: "Location Advantage",
+  title: "Connected to everything that matters",
+  description:
+    "Chambenahalli sits on the Sarjapur Road growth corridor — with the city's tech hubs, schools, and healthcare all within easy reach, and metro connectivity on the way.",
+  image:
+    "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1000&q=85",
+  points: [
+    {
+      icon: "TrainFront",
+      title: "Upcoming Metro",
+      desc: "Planned metro connectivity on the Sarjapur corridor future-proofs daily commutes.",
+    },
+    {
+      icon: "Briefcase",
+      title: "ORR IT Corridor",
+      desc: "Quick access to Bellandur and the Outer Ring Road tech parks.",
+    },
+    {
+      icon: "Building2",
+      title: "Whitefield",
+      desc: "Direct route via the Sarjapur–Whitefield road.",
+    },
+    {
+      icon: "Cpu",
+      title: "Electronic City",
+      desc: "Well connected via Sarjapur Road and Hosur Road.",
+    },
+    {
+      icon: "School",
+      title: "Schools & Colleges",
+      desc: "Reputed international schools in the immediate neighbourhood.",
+    },
+    {
+      icon: "HeartPulse",
+      title: "Healthcare",
+      desc: "Multi-speciality hospitals within easy reach of the project.",
+    },
+  ],
+};
+
+// ── FAQ ──
+export const faqs = [
+  {
+    q: "Where is Binary Project 4 located?",
+    a: "The project is at Chambenahalli, Sarjapur Road, Bengaluru — on one of the city's fastest-growing investment corridors, with 100ft / 80ft wide road access.",
+  },
+  {
+    q: "What configurations and pricing are available?",
+    a: "2 BHK (1,117 + 507 sq.ft) from \u20B995 L and premium 3 BHK from \u20B91.35 Cr, at \u20B98,499/sq.ft. The first 50 flats get a special launch price of \u20B98,500/sq.ft under the launch offer.",
+  },
+  {
+    q: "What does low-density living mean here?",
+    a: "Only 6 apartments per floor with no common walls. Homes come with east and north facing options, large balconies, cross ventilation, and maximum natural light.",
+  },
+  {
+    q: "Is the EOI refundable?",
+    a: "Yes — the Expression of Interest is fully refundable. It simply reserves your preferred unit while you complete your decision.",
+  },
+  {
+    q: "Is the project RERA registered?",
+    a: "Yes. The project is registered under RERA No. KA/01/2026/0001.",
+  },
+  {
+    q: "How much open space and how many amenities are there?",
+    a: "Over 80% of the 3.5-acre campus is open green space, with 60+ amenities and an 8,000+ sq.ft clubhouse — including a swimming pool, amphitheatre, sky cinema terrace, and more.",
+  },
+];
