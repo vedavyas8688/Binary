@@ -31,7 +31,7 @@ export default function Hero() {
         style={{ background: "var(--g-brand)" }}
       />
 
-      <div className="container-site grid items-center gap-10 py-12 md:py-16 lg:grid-cols-2">
+      <div className="container-site grid min-h-[calc(100vh-3.5rem)] items-center gap-10 py-12 md:py-14 lg:grid-cols-2 lg:gap-14">
         {/* Copy */}
         <div className="flex flex-col items-start gap-5">
           <span
@@ -89,7 +89,7 @@ export default function Hero() {
             <img
               src={heroData.image}
               alt="Binary Project 4 — exterior view"
-              className="h-[340px] w-full object-cover md:h-[460px]"
+              className="h-[360px] w-full object-cover md:h-[540px]"
               loading="eager"
             />
           </div>

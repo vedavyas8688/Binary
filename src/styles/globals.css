@@ -30,7 +30,7 @@
 
   /* layout */
   .container-site {
-    @apply max-w-site mx-auto px-5 md:px-8;
+    @apply max-w-site mx-auto px-5 md:px-10 xl:px-12;
   }
 
   .section {

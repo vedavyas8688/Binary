@@ -14,23 +14,23 @@
 
 :root {
   /* ── Base surfaces ── */
-  --c-bg:        #f7f9fa;   /* page background (light mist)        */
+  --c-bg:        #faf7f2;   /* page background (warm ivory)        */
   --c-surface:   #ffffff;   /* cards, navbar, panels               */
-  --c-line:      #e6ecef;   /* hairline borders & dividers         */
+  --c-line:      #eae2d6;   /* hairline borders & dividers         */
 
   /* ── Text ── */
-  --c-ink:       #17222e;   /* headings & primary text             */
-  --c-muted:     #64727f;   /* secondary / body text               */
+  --c-ink:       #2a241b;   /* headings & primary text (warm ink)  */
+  --c-muted:     #7a6f5f;   /* secondary / body text               */
 
-  /* ── Brand (gradient runs from brand → brand-2) ── */
-  --c-brand:     #0e8c68;   /* emerald                             */
-  --c-brand-2:   #1795b4;   /* teal-blue                           */
-  --c-brand-soft:#e9f5f0;   /* tinted backgrounds, chips           */
-  --c-brand-ink: #0a6b50;   /* darker brand, for text on light bg  */
+  /* ── Brand: beige / sand (gradient runs brand → brand-2) ── */
+  --c-brand:     #b08d57;   /* camel beige                         */
+  --c-brand-2:   #d3b889;   /* light sand                          */
+  --c-brand-soft:#f4ede1;   /* tinted backgrounds, chips           */
+  --c-brand-ink: #8a6a3c;   /* darker beige, for text on light bg  */
 
   /* ── Gradients ── */
   --g-brand:      linear-gradient(120deg, var(--c-brand) 0%, var(--c-brand-2) 100%);
-  --g-brand-soft: linear-gradient(135deg, #ecf7f2 0%, #e9f3f8 55%, #f3f1fa 100%);
+  --g-brand-soft: linear-gradient(135deg, #f7f1e6 0%, #f6efe4 55%, #f3ece4 100%);
 
   /* ── Fonts ── */
   --font-heading: "Roboto Flex", "Roboto", sans-serif;  /* titles & headings */

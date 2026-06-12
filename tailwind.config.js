@@ -47,7 +47,7 @@ export default {
         body:    "var(--font-body)",
       },
       maxWidth: {
-        site: "72rem", // 1152px — slightly narrower, neater container
+        site: "85rem", // 1360px — wide container, fills the screen
       },
       boxShadow: {
         card: "0 1px 2px rgba(16,34,47,0.04), 0 8px 24px rgba(16,34,47,0.06)",
