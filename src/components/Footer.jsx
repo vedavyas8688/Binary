@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Linkedin } from "lucide-react";
+import { Instagram, Facebook, Linkedin, MapPin } from "lucide-react";
 import { siteInfo, navLinks, footerSection } from "../data/content";
 
 const SOCIALS = [
@@ -11,63 +11,113 @@ const SOCIALS = [
 export default function Footer() {
   return (
     <footer
-      className="relative overflow-hidden text-white"
-      style={{ backgroundImage: "linear-gradient(135deg, var(--c-brand), var(--c-brand-2))" }}
-    >
-      {/* soft depth glows */}
-      <div aria-hidden="true" className="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full bg-white opacity-[0.07] blur-3xl" />
-      <div aria-hidden="true" className="pointer-events-none absolute -bottom-40 right-10 h-80 w-80 rounded-full opacity-[0.15] blur-3xl" style={{ background: "var(--c-brand-ink)" }} />
+  className="relative overflow-hidden text-white"
+  style={{ backgroundImage: "linear-gradient(135deg, #1c3d2a 0%, #0e2b1c 45%, #1a4a35 80%, #0d3020 100%)" }}
+>
+      {/* gradient hairline along the top edge */}
+      <span
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-[2px]"
+        style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.55), transparent)" }}
+      />
+
+      {/* depth glows */}
+      <div aria-hidden="true" className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-white opacity-[0.08] blur-3xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 right-6 h-72 w-72 rounded-full opacity-[0.18] blur-3xl" style={{ background: "var(--c-brand-ink)" }} />
+
+      {/* faint texture for depth */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage: "radial-gradient(rgba(255,255,255,0.7) 1px, transparent 1px)",
+          backgroundSize: "26px 26px",
+        }}
+      />
 
       {/* lg:pt-44 reserves room for the contact card hanging from above */}
-      <div className="container-site relative pb-8 pt-14 lg:pt-44">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          {/* brand + blurb */}
+      <div className="container-site relative pb-5 pt-10 lg:pt-44">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+
+          {/* ── Brand block ── */}
           <div className="lg:col-span-5">
-            <p className="font-display text-4xl font-semibold tracking-wide md:text-5xl">
-              {siteInfo.name}
-              <span className="ml-3 align-middle font-heading text-sm font-medium uppercase tracking-[0.2em] text-white/80">
-                {siteInfo.tagline}
+            <div className="flex items-center gap-3">
+              {/* mini brand glyph */}
+              <span
+                className="flex h-12 w-12 items-center justify-center rounded-lg font-display text-xl font-bold"
+                style={{
+                  background: "rgba(255,255,255,0.16)",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  color: "#fff",
+                  backdropFilter: "blur(8px)",
+                }}
+              >
+                B
               </span>
-            </p>
-            <span className="mt-4 block h-px w-14 bg-white/60" />
-            <p className="mt-5 max-w-sm text-base leading-relaxed text-white/85">
-              RERA No: {siteInfo.rera} · EOI fully refundable
+              <p className="font-display text-4xl font-semibold leading-none tracking-wide md:text-5xl">
+                {siteInfo.name}
+                <span className="ml-2.5 align-middle font-heading text-xs font-medium uppercase tracking-[0.22em] text-white/80">
+                  {siteInfo.tagline}
+                </span>
+              </p>
+            </div>
+
+            <span
+              className="mt-4 block h-0.5 w-14 rounded-full"
+              style={{ background: "linear-gradient(to right, #fff, rgba(255,255,255,0.3))" }}
+            />
+
+            <p className="mt-3.5 max-w-sm text-sm leading-relaxed text-white/85">
+              RERA No:{" "}
+              <span className="font-semibold text-white">{siteInfo.rera}</span>{" "}
+              · EOI fully refundable
             </p>
           </div>
 
-          {/* about us */}
+          {/* ── About ── */}
           <div className="lg:col-span-4">
-            <h4 className="font-heading text-base font-bold uppercase tracking-[0.16em]">
-              {footerSection.about.title}
-            </h4>
-            <p className="mt-4 max-w-sm text-base leading-relaxed text-white/85">
+            <div className="flex items-center gap-2.5">
+              <span className="h-px w-6 bg-white/70" />
+              <h4 className="font-heading text-xs font-bold uppercase tracking-[0.22em] text-white">
+                {footerSection.about.title}
+              </h4>
+            </div>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/85">
               {footerSection.about.text}
             </p>
           </div>
 
-          {/* socials — solid white circles, brand icons */}
-          <div className="flex items-start gap-3.5 lg:col-span-3 lg:justify-end">
+          {/* ── Socials ── */}
+          <div className="flex items-start gap-3 lg:col-span-3 lg:justify-end">
             {SOCIALS.map(({ Icon, label, href }) => (
               <a
                 key={label}
                 href={href}
                 aria-label={label}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-brand-ink shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift"
+                className="group relative flex h-11 w-11 items-center justify-center rounded-full bg-white text-brand-ink shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift"
               >
-                <Icon size={19} strokeWidth={2} />
+                {/* gradient swap on hover */}
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background: "linear-gradient(120deg, var(--c-brand-ink), var(--c-brand))",
+                  }}
+                />
+                <Icon size={17} strokeWidth={2} className="relative z-10 transition-colors duration-300 group-hover:text-white" />
               </a>
             ))}
           </div>
         </div>
 
-        {/* nav row */}
-        <nav className="mt-14 border-t border-white/30 pt-7">
-          <ul className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4">
+        {/* ── Nav row ── */}
+        <nav className="mt-9 border-t border-white/25 pt-5">
+          <ul className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
             {navLinks.map((l) => (
               <li key={l.path}>
                 <Link
                   to={l.path}
-                  className="group relative font-heading text-sm font-semibold uppercase tracking-[0.18em] text-white/90 transition-colors hover:text-white"
+                  className="group relative font-heading text-xs font-semibold uppercase tracking-[0.22em] text-white/90 transition-colors hover:text-white"
                 >
                   {l.label}
                   <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-white transition-all duration-300 group-hover:w-full" />
@@ -77,10 +127,13 @@ export default function Footer() {
           </ul>
         </nav>
 
-        {/* bottom line */}
-        <div className="mt-8 flex flex-col items-center justify-between gap-2.5 border-t border-white/30 pt-6 text-sm text-white/80 md:flex-row">
+        {/* ── Bottom line ── */}
+        <div className="mt-5 flex flex-col items-start justify-between gap-2 border-t border-white/25 pt-4 text-xs text-white/80 md:flex-row md:items-center">
           <span>© {new Date().getFullYear()} {siteInfo.name} {siteInfo.tagline}. All rights reserved.</span>
-          <span>Sarjapur Road · Bengaluru</span>
+          <span className="inline-flex items-center gap-1.5 font-heading font-medium tracking-wide">
+            <MapPin size={11} className="text-white/80" />
+            Sarjapur Road · Bengaluru
+          </span>
         </div>
       </div>
     </footer>

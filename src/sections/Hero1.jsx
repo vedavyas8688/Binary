@@ -49,13 +49,11 @@ export default function Hero1() {
           backgroundSize: "26px 26px",
         }}
       />
-      {/* Glow top-left */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full opacity-[0.18] blur-3xl"
         style={{ background: "radial-gradient(closest-side, #4a8c5c, transparent)" }}
       />
-      {/* Glow bottom-right */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-40 right-40 h-[500px] w-[500px] rounded-full opacity-[0.12] blur-3xl"
@@ -103,7 +101,7 @@ export default function Hero1() {
               className="font-display font-bold leading-[1.02]"
               style={{ fontSize: "clamp(44px, 6vw, 82px)", color: "#ffffff" }}
             >
-              Binary  
+              Binary
             </h1>
 
             <p
@@ -116,7 +114,6 @@ export default function Hero1() {
               connectivity — built for those who choose better.
             </p>
 
-            {/* Price callout */}
             <div data-r className="mt-6 flex items-baseline gap-3">
               <span
                 className="font-display text-2xl font-bold"
@@ -129,7 +126,11 @@ export default function Hero1() {
               </span>
               <span
                 className="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"
-                style={{ background: "rgba(201,168,76,0.18)", color: "#c9a84c", border: "1px solid rgba(201,168,76,0.35)" }}
+                style={{
+                  background: "rgba(201,168,76,0.18)",
+                  color: "#c9a84c",
+                  border: "1px solid rgba(201,168,76,0.35)",
+                }}
               >
                 Launch Offer
               </span>
@@ -156,99 +157,23 @@ export default function Hero1() {
             </div>
           </div>
 
-          {/* ── Right: brochure card ── */}
+          {/* ── Right: image-only card + stats tiles ── */}
           <div data-r className="flex flex-col gap-3">
 
-            {/* Main brochure poster card */}
+            {/* Poster card — image only */}
             <div
-              className="relative overflow-hidden"
+              className="overflow-hidden"
               style={{
                 borderRadius: "20px",
                 border: "1px solid rgba(255,255,255,0.15)",
-                height: "360px",
+                boxShadow: "0 24px 60px rgba(0,0,0,0.35)",
               }}
             >
-              {/* Full bleed image */}
-              <img
-                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=900&q=90"
+               <img
+                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1000&q=90"
                 alt="Binary Project 4"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="block h-[500px] w-full animate-[float_6s_ease-in-out_infinite] object-cover"
               />
-
-              {/* Left-side dark gradient overlay */}
-              <div
-                aria-hidden="true"
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(105deg, rgba(8,24,16,0.90) 0%, rgba(8,24,16,0.75) 38%, rgba(8,24,16,0.20) 65%, rgba(8,24,16,0.05) 100%)",
-                }}
-              />
-
-              {/* Content overlaid on image */}
-              <div className="absolute inset-0 flex flex-col justify-between p-6">
-                {/* Top: title + tagline + location */}
-                <div>
-                  <p
-                    className="font-display font-bold leading-tight"
-                    style={{ fontSize: "20px", color: "#ffffff", letterSpacing: "0.06em" }}
-                  >
-                    BINARY<br />PROJECT 4
-                  </p>
-                  <div className="mt-2 flex items-center gap-1.5">
-                    <span style={{ color: "#c9a84c", fontSize: "10px" }}>✦</span>
-                    <p className="text-xs italic" style={{ color: "rgba(255,255,255,0.85)" }}>
-                      Ultra Luxury Living on Sarjapur Road
-                    </p>
-                  </div>
-                  <p
-                    className="mt-1.5 text-xs leading-relaxed"
-                    style={{ color: "rgba(255,255,255,0.55)", maxWidth: "170px" }}
-                  >
-                    Chambenahalli, Sarjapur Road,<br />Bengaluru
-                  </p>
-                </div>
-
-                {/* Bottom: stats */}
-                <div>
-                  <div className="flex items-center gap-4">
-                    {[
-                      { val: "3.5", label: "Acres" },
-                      { val: "234", label: "Units" },
-                      { val: "60+", label: "Amenities" },
-                    ].map((s, idx) => (
-                      <div key={s.label} className="flex items-center gap-4">
-                        {idx > 0 && (
-                          <span style={{ color: "rgba(255,255,255,0.25)", fontSize: "18px" }}>|</span>
-                        )}
-                        <div className="text-center">
-                          <p className="text-base font-bold leading-none" style={{ color: "#ffffff" }}>
-                            {s.val}
-                          </p>
-                          <p
-                            className="mt-0.5 text-xs uppercase tracking-wider"
-                            style={{ color: "rgba(255,255,255,0.50)" }}
-                          >
-                            {s.label}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-3">
-                    <p className="text-sm font-bold" style={{ color: "#ffffff" }}>
-                      Ultra Luxury 2 & 3 BHK
-                    </p>
-                    <p
-                      className="text-xs uppercase tracking-widest"
-                      style={{ color: "rgba(255,255,255,0.50)" }}
-                    >
-                      Only 6 Units Per Floor · No Common Walls
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Stats tiles */}
@@ -274,7 +199,10 @@ export default function Hero1() {
                   >
                     {stat.label}
                   </p>
-                  <p className="mt-1.5 text-sm font-semibold" style={{ color: "#ffffff" }}>
+                  <p
+                    className="mt-1.5 text-sm font-semibold"
+                    style={{ color: "#ffffff" }}
+                  >
                     {stat.value}
                   </p>
                 </div>
