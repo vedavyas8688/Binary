@@ -826,46 +826,98 @@ export const footerSection = {
 };
 
 
-
-// ── What We Do (pinned orbital slides) ──
 export const whatWeDo = [
   {
     num: "01",
     eyebrow: "What We Do",
-    title: "Residences and planning",
-    desc: "2 & 3 BHK homes planned around privacy — only 6 per floor, no common walls, light and cross ventilation in every room.",
+    title: "Residences and",
+    titleAccent: "planning",
+    desc: "2 & 3 BHK homes planned around privacy — only 6 per floor, no common walls, and light + cross ventilation in every room.",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=85",
-    side: "right", // panel side
+    side: "right",
+    chip: "234 Homes · 6 per floor",
     thumbs: [
-      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=200&q=80",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=200&q=80",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=200&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=200&q=80",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=200&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=200&q=80",
     ],
   },
   {
     num: "02",
     eyebrow: "What We Do",
-    title: "Amenities and open space",
+    title: "Amenities and",
+    titleAccent: "open space",
     desc: "An 8,000+ sq.ft clubhouse and 60+ curated amenities woven through 3.5 acres — with more than 80% left open and green.",
     image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1400&q=85",
     side: "left",
+    chip: "60+ Amenities · 80%+ Open",
     thumbs: [
-      "https://images.unsplash.com/photo-1560448075-cbc16bb4af8e?w=200&q=80",
-      "https://images.unsplash.com/photo-1575783970733-1aaedde1db74?w=200&q=80",
-      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=200&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=200&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=200&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=200&q=80",
     ],
   },
   {
     num: "03",
     eyebrow: "What We Do",
-    title: "Location and investment",
+    title: "Location and",
+    titleAccent: "investment",
     desc: "Chambenahalli on Sarjapur Road — upcoming metro, ORR IT corridor access, and a fully refundable EOI to reserve at launch pricing.",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=85",
     side: "right",
+    chip: "Sarjapur Road · Bengaluru",
     thumbs: [
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&q=80",
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=200&q=80",
-      "https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=200&q=80",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=200&q=80",
+      "https://images.unsplash.com/photo-1430285561322-7808604715df?w=200&q=80",
     ],
   },
 ];
+
+// ── Service Pillars (Section A — brown panel, hover reveals image) ──
+export const servicePillars = {
+  items: [
+    {
+      num: "01",
+      title: "Residential",
+      desc: "Ultra-luxury 2 & 3 BHK homes designed around privacy — only six per floor, no common walls, and light in every room.",
+      hoverImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=85",
+    },
+    {
+      num: "02",
+      title: "Interior Spaces",
+      desc: "Generous floor plates with premium finishes, expansive balconies, and Vaastu-compliant layouts crafted for everyday calm.",
+      hoverImage: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=85",
+    },
+    {
+      num: "03",
+      title: "Master Plan",
+      desc: "3.5 acres with 80%+ open space — a clubhouse, 60+ amenities, and landscape gardens woven into the community spine.",
+      hoverImage: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=85",
+    },
+  ],
+};
+
+
+// ── Showcase (Section B — overlapping card on photo) ──
+export const showcase = {
+  eyebrow: "Our Project",
+  title: "Best Solution For",
+  titleAccent: "Your Home",
+  desc: "Ultra-luxury 2 & 3 BHK residences across 3.5 acres at Chambenahalli, Sarjapur Road — only six homes per floor, 80%+ open space, and an address built for the next decade.",
+  cta: { label: "Explore the Project", href: "/#contact" },
+  image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=88",
+  locationChip: "Chambenahalli · Sarjapur Road",
+  stats: [
+    { value: "3.5", suffix: " Acres", label: "Land Parcel" },
+    { value: "234", suffix: "", label: "Homes" },
+    { value: "60+", suffix: "", label: "Amenities" },
+  ],
+};
+
+export const navbarPartner = {
+  name: "Binary",
+  subtitle: "Real Estate",
+  // tagline shown under the name in tiny tracked caps (like "THE FOUNDATION OF TRUST")
+  trustLine: "Ultra-Luxury · Sarjapur Road",
+};

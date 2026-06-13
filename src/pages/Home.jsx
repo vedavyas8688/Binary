@@ -10,15 +10,20 @@ import Process from "../sections/Process";
 import Testimonials from "../sections/Testimonials";
 import Contact from "../sections/Contact";
 import WhatWeDo from "../sections/WhatWeDo";
+import Showcase from "../sections/Showcase";
+import ServicePillars from "../sections/ServicePillars";
+import Hero1 from "../sections/Hero1";
 
 export default function Home() {
   return (
     <PageLayout>
-      <Hero />
+      <Hero1/>
       <AboutProject />
-      <Stats />
+      {/* <Stats /> */}
       <Amenities />
-      {/* <WhatWeDo /> */}
+      <Showcase />
+      {/* <ServicePillars /> */}
+      <WhatWeDo />
       <Highlights />
       <MasterPlan />
       <FloorPlans />
